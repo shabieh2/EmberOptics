@@ -82,7 +82,8 @@ if __name__ == '__main__':
             with st.spinner(text='Detecting..'):
                 st.sidebar.image(uploaded_file)
                 picture = Image.open(uploaded_file)
-                picture = picture.save(f'data/images/{uploaded_file.name}')
+                #picture = picture.save(f'data/images/{uploaded_file.name}')
+                picture = picture.save(f'/app/emberoptics/{uploaded_file.name}')
                 #opt.source = f'data/images/{uploaded_file.name}'
                 opt.source = f'/app/emberoptics/{uploaded_file.name}'
         else:
