@@ -96,7 +96,7 @@ if __name__ == '__main__':
             is_valid = True
             with st.spinner(text='Detecting...'):
                 st.sidebar.video(uploaded_file)
-                with open(os.path.join("/app", "/emberoptics/", uploaded_file.name), "wb") as f:
+                with open(os.path.join(uploaded_file.name), "wb") as f:
                     f.write(uploaded_file.getbuffer())
                 opt.source = f'/app/emberoptics/{uploaded_file.name}'
         else:
