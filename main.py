@@ -30,7 +30,9 @@ def get_detection_folder():
 
 if __name__ == '__main__':
 
-    st.title('Ember Optics WildFire Detection App')
+    im1 = Image.open('./a.png')
+    st.image(im1, use_column_width=True)
+    st.title('WildFire Detection Systems')
 
     parser = argparse.ArgumentParser()
     parser.add_argument('--weights', nargs='+', type=str,
