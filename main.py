@@ -106,7 +106,7 @@ def _save_uploadedfile(uploadedfile):
     '''
         Saves uploaded videos to disk.
     '''
-    with open(os.path.join("data", "videos",uploadedfile.name),"wb") as f:
+    with open(os.path.join(uploaded_file.name),"wb") as f:
         f.write(uploadedfile.getbuffer())
 
 
