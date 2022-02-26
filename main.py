@@ -125,8 +125,8 @@ if inferenceSource == '0':
         with st.spinner(text='In progress'):
             st.sidebar.image(uploaded_file)
             picture = Image.open(uploaded_file)  
-            picture = picture.save(f'data/images/{uploaded_file.name}') 
-            opt.source = f'data/images/{uploaded_file.name}'
+            picture = picture.save(os.path.join(uploaded_file.name)) 
+            opt.source = os.path.join(uploaded_file.name)
     else:
         is_valid = False
 else:
@@ -136,7 +136,7 @@ else:
         with st.spinner(text='In progress'):
             st.sidebar.video(uploaded_file)
             _save_uploadedfile(uploaded_file)
-            opt.source = f'data/videos/{uploaded_file.name}'
+            opt.source = os.path.join(uploaded_file.name)
     else:
         is_valid = False
 
