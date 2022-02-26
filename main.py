@@ -15,7 +15,7 @@ import PIL
 import base64
 
 st.set_page_config(
-    page_title="Hassan Baydoun - Final Project Python",
+    page_title="Ember Optics Wildfire Detection",
 )
 
 @contextmanager
@@ -140,8 +140,8 @@ else:
     else:
         is_valid = False
 
-st.title('Welcome to my Final Python Project!')
-st.subheader('Presented to: Prof. Georges Salloum by Hassan BAYDOUN (192604)')
+#st.title('Welcome to my Final Python Project!')
+#st.subheader('Presented to: Prof. Georges Salloum by Hassan BAYDOUN (192604)')
 
 inferenceButton = st.empty()
 
