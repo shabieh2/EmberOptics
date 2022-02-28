@@ -140,7 +140,7 @@ if inferenceSource == '0':
         is_valid = False
 else:
     uploaded_file = st.sidebar.file_uploader("Upload Video", type=['mp4'])
-    #fmpeg -i input_video_created_by_OpenCV.mp4 -vcodec libx264 output_video_that_streamlit_can_play.mp4
+    
     if uploaded_file is not None:
         is_valid = True
         with st.spinner(text='In progress'):
