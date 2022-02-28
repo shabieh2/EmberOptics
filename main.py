@@ -163,7 +163,7 @@ if is_valid:
             st.warning('Video playback not available on deployed version due to licensing restrictions. ')
             with st.spinner(text='Preparing Video'):
                 for vid in os.listdir(_get_latest_folder()):
-                    e=f'{_get_latest_folder()}/{vid}')
+                    e=f'{_get_latest_folder()}/{vid}'
                     os.system('ffmpeg -i e -vcodec libx264 e')
                     #st.video(vid)
                     st.video(e)
