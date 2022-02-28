@@ -19,7 +19,7 @@ import base64
 
 im1 = Image.open('./a.png')
 st.image(im1, use_column_width=True)
-st.title("Wildfire Detection")
+st.title("WILDFIRE DETECTION")
 
 #st.set_page_config(
 #    page_title="Ember Optics Wildfire Detection",
@@ -147,8 +147,8 @@ else:
     else:
         is_valid = False
 
-st.title('Ember Optics Wildfire Detection')
-#st.subheader('Presented to: Prof. Georges Salloum by Hassan BAYDOUN (192604)')
+
+
 
 inferenceButton = st.empty()
 
