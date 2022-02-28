@@ -14,12 +14,16 @@ from PIL import Image
 import PIL
 import base64
 
+
+
+
 im1 = Image.open('./a.png')
 st.image(im1, use_column_width=True)
+st.title("Wildfire Detection")
 
-st.set_page_config(
-    page_title="Ember Optics Wildfire Detection",
-)
+#st.set_page_config(
+#    page_title="Ember Optics Wildfire Detection",
+#)
 
 @contextmanager
 def st_redirect(src, dst):
