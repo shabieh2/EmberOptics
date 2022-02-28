@@ -166,7 +166,7 @@ if is_valid:
                     e=f'{_get_latest_folder()}/{vid}'
                     os.system('ffmpeg -i e -vcodec libx264 f')
                     #st.video(vid)
-                    st.video(f)
+                    st.video('f')
                     
                 st.balloons()
         else:
