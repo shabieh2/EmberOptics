@@ -164,7 +164,7 @@ if is_valid:
             with st.spinner(text='Preparing Video'):
                 for vid in os.listdir(_get_latest_folder()):
                     e=f'{_get_latest_folder()}/{vid}'
-                    ffmpeg -i e -vcodec libx264 f
+                    os.system('ffmpeg -i e -vcodec libx264 f')
                     #st.video(vid)
                     st.video(f)
                     
