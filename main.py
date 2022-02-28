@@ -163,7 +163,7 @@ if is_valid:
             st.warning('Video playback not available on deployed version due to licensing restrictions. ')
             with st.spinner(text='Preparing Video'):
                 for vid in os.listdir(_get_latest_folder()):
-                    #os.system('ffmpeg -i f'{_get_latest_folder()}/{vid}' -vcodec libx264 f'{_get_latest_folder()}/{vid}'')
+                    os.system('ffmpeg -i f'{_get_latest_folder()}/{vid}' -vcodec libx264 f'{_get_latest_folder()}/{vid}'')
                     st.video(f'{_get_latest_folder()}/{vid}')
                 st.balloons()
         else:
