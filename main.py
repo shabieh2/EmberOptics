@@ -165,9 +165,9 @@ if is_valid:
                 for vid in os.listdir(_get_latest_folder()):
                     e=f'{_get_latest_folder()}/{vid}'
                     #os.system('ffmpeg -i e -vcodec libx264 f')
-                    os.system('ffmpeg -i {} -vcodec libx264 {}'.format(e,e.replace('tmp', '')))
-                    #st.video(vid)
-                    st.video(e)
+                    #os.system('ffmpeg -i {} -vcodec libx264 {}'.format(e,e.replace('tmp', '')))
+                    st.video(f'{_get_latest_folder()}/{vid}')
+                    
                     
                 st.balloons()
         else:
