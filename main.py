@@ -17,13 +17,14 @@ import base64
 
 
 
+
+#st.title("WILDFIRE DETECTION")
+
+st.set_page_config(
+    page_title="Wildfire Detection",
+)
 im1 = Image.open('./a.png')
 st.image(im1, use_column_width=True)
-st.title("WILDFIRE DETECTION")
-
-#st.set_page_config(
-#    page_title="Ember Optics Wildfire Detection",
-#)
 
 @contextmanager
 def st_redirect(src, dst):
