@@ -128,6 +128,7 @@ inferenceSource = str(st.sidebar.selectbox('Select Source to detect:', options=l
 
 if inferenceSource == '0':
     uploaded_file = st.sidebar.file_uploader("Upload Image", type=['png','jpeg', 'jpg'])
+    
     if uploaded_file is not None:
         is_valid = True
         with st.spinner(text='In progress'):
@@ -139,6 +140,7 @@ if inferenceSource == '0':
         is_valid = False
 else:
     uploaded_file = st.sidebar.file_uploader("Upload Video", type=['mp4'])
+    os.system('ffmpeg -i {} -vcodec libx264 {}'.format(uploaded_file, uploaded_file.replace('tmp', '')))
     if uploaded_file is not None:
         is_valid = True
         with st.spinner(text='In progress'):
