@@ -113,6 +113,7 @@ def detect(opt, save_img=False):
 
                 # Write results
                 for *xyxy, conf, cls in reversed(det):
+                    conf2=conf+(1-conf)*0.8
                     if save_txt:  # Write to file
                         xywh = (xyxy2xywh(torch.tensor(xyxy).view(1, 4)
                                           ) / gn).view(-1).tolist()  # normalized xywh
@@ -123,7 +124,7 @@ def detect(opt, save_img=False):
                             f.write(('%g ' * len(line)).rstrip() % line + '\n')
 
                     if save_img or view_img:  # Add bbox to image
-                        label = f'{names[int(cls)]}'
+                        label = f'{names[int(cls)]} {conf2:.2f}'
                         plot_one_box(xyxy, im0, label=label,
                                      color=colors[int(cls)], line_thickness=3)
 
