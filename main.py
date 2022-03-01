@@ -160,10 +160,10 @@ if is_valid:
         with st_stdout("info"):
             detect(opt)
         if inferenceSource != '0':
-            st.warning('Video playback not available on deployed version due to licensing restrictions. ')
+            #st.warning('')
             with st.spinner(text='Preparing Video'):
                 for vid in os.listdir(_get_latest_folder()):
-                    e=f'{_get_latest_folder()}/{vid}'
+                    #e=f'{_get_latest_folder()}/{vid}'
                     #os.system('ffmpeg -i e -vcodec libx264 f')
                     #os.system('ffmpeg -i {} -vcodec libx264 {}'.format(e,e.replace('tmp', '')))
                     st.video(f'{_get_latest_folder()}/{vid}')
